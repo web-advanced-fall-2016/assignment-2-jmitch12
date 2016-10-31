@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Neuton:300,400');
+$title-font:'Montserrat',
+sans-serif;
+$body-font:'Neuton',
+serif;
+$accent:#46bc96;
+$type:#ffffff;
+$main-color:#333132;
+$page:100vw;
+$menu:100px;
+$side: 45px;
+$top: 35px;
+$op:.85;
+body {
+    background-color: $main-color;
+    height:100%;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: $page;
+    height: $menu;
+    background-color: $main-color;
+    z-index: 5;
+    nav {
+        float: right;
+        line-height: 30px;
+        margin: $top $side;
+        a {
+            color: $type;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: $title-font;
+            font-size: 1em;
+            margin-left: 20px;
+        }
+    }
+}
+
+header nav a:hover {
+    color: $accent;
+}
+
+#logo {
+    position: relative;
+    top: 25px;
+    left: $side;
+    float: left;
+    width: 65px;
+    height: 50px;
+    background-color: $accent;
+    opacity: $op;
+    h1 {
+        font-family: $title-font;
+        color: $main-color;
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: uppercase;
+        padding-top: 12px;
+    }
+}
+
+.student-grid {
+    position: relative;
+    top: $menu;
+    display: flex;
+    flex-wrap: wrap;
+    .student {
+        width: 25%;
+        height: 25%;
+    }
+    .teacher{
+        height:40%;
+        width:65%;
+    }
+}
+
+.student:hover {
+    opacity: $op;
+}
+
+#b-content {
+    background-color: $accent;
+    max-width: 50%;
+    padding: $top $side $top $side;
+    h1 {
+        font-family: $title-font;
+        color: $type;
+        font-size: 1.5em;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+    p {
+        font-family: $body-font;
+        color: $type;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        font-weight:300;
+    }
+}
+
+.about{
+	position:relative;
+    float:right;
+	bottom:450px;
+    width:$menu*3.5;
+    padding: $top $side $top $side;
+    h1 {
+        font-family: $title-font;
+        color: $type;
+        font-size: 1.5em;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+    }
+    p{
+        text-align:left;
+        font-family: $body-font;
+        color: $type;
+        font-size: 1.15em;
+        letter-spacing: 2px;
+        line-height:1.2em;
+        font-weight:300;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .student-grid {
+        position: absolute;
+        top: $menu;
+        display: flex;
+        flex-wrap: wrap;
+        .student {
+            width: 50%;
+            height: 50%;
+        }
+        .teacher{
+        	width:100%;
+        }
+    }
+}
