@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Neuton:300,400");
+body {
+  background-color: #333132;
+  height: 100%;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100px;
+  background-color: #333132;
+  z-index: 5;
+}
+header nav {
+  float: right;
+  line-height: 30px;
+  margin: 35px 45px;
+}
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  margin-left: 20px;
+}
+
+header nav a:hover {
+  color: #46bc96;
+}
+
+#logo {
+  position: relative;
+  top: 25px;
+  left: 45px;
+  float: left;
+  width: 65px;
+  height: 50px;
+  background-color: #46bc96;
+  opacity: 0.85;
+}
+#logo h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #333132;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 12px;
+}
+
+.student-grid {
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.student-grid .student {
+  width: 25%;
+  height: 25%;
+}
+.student-grid .teacher {
+  height: 40%;
+  width: 100%;
+}
+
+.student:hover, .teacher:hover {
+  opacity: 0.85;
+}
+
+#b-content, #c-content, #c-content #name, #c-content #content {
+  background-color: #46bc96;
+  max-width: 50%;
+  padding: 35px 45px 35px 45px;
+}
+#b-content h1, #c-content h1, #c-content #name h1, #c-content #content h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 1.5em;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+#b-content p, #c-content p, #c-content #name p, #c-content #content p {
+  font-family: "Neuton", serif;
+  color: #ffffff;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 767px) {
+  .student-grid {
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .student-grid .student {
+    width: 50%;
+    height: 50%;
+  }
+  .student-grid .teacher {
+    width: 100%;
+  }
+}
