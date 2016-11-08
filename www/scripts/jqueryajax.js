@@ -1,7 +1,7 @@
 /* eslint-env es6*/
 let modal = document.getElementById('myModal');
 let span = document.getElementsByClassName("open")[0];
-let images = document.querySelectorAll('.students');
+let images = document.querySelectorAll('.image');
 let info = document.querySelectorAll('.info');
 
 (function() {
@@ -9,9 +9,31 @@ let info = document.querySelectorAll('.info');
     let content = document.querySelector('#name');
     let index = 0;
     let jqueryButton = document.querySelector('.image');
-    let student = document.querySelector('.student');
+    let student = document.querySelector('.image');
     let studentGrid = document.querySelector('.student-grid');
     
+
+    studentGrid.addEventListener('click', function(evnt) {
+        console.log("working");
+       if( evnt.target.classList.contains('thumb')){
+            
+            $.ajax({
+                method: "GET",
+                url: baseURL+'/students/'+evnt.target.dataset.id,
+            }).done(function(response){
+                document.querySelector('#myModal .modalContent .name').innerText =  response.first_name + " " + response.last_name;
+                // document.querySelector('#myModal .modalContent)
+                document.querySelector('#myModal .modalContent .email').innerText =  response.email;
+                document.querySelector('#myModal .modalContent .exerpt').innerText =  response.excerpt;
+                // document.querySelector('#myModal .modalContent .links').innerText =  response.links;
+                // document.querySelector('#myModal .modalContent .profile_picture').innerText =  response.image.excerpt;
+                modal.style.display = "block";
+            });
+        }
+
+            //.always(); or .error(function(){});
+    });
+
     $.ajax({
         method: "GET",
         url: baseURL+'/students'
@@ -26,34 +48,15 @@ let info = document.querySelectorAll('.info');
                 let newDiv = document.createElement('div');
                 let newImg = document.createElement('img');
                 newImg.src = baseURL+response.profile_picture;
-                newDiv.classList.add('student');
+                newDiv.classList.add('image');
+
+                newImg.dataset.id = response.id;
                 newImg.classList.add('thumb');
                 newDiv.appendChild(newImg);
                 studentGrid.appendChild(newDiv);
             });
         }
 
-    });
-
-    studentGrid.addEventListener('click', function(evnt) {
-        console.log("broken");
-       if( evnt.target.classList.contains('.student')){
-            
-            $.ajax({
-                method: "GET",
-                url: URL+'/students/' + evnt.target.dataset.id,
-            }).done(function(response){
-                document.querySelector('#myModal .modalContent .name').innerText =  response.first_name + " " + response.last_name;
-                // document.querySelector('#myModal .modalContent)
-                document.querySelector('#myModal .modalContent .email').innerText =  response.email;
-                document.querySelector('#myModal .modalContent .exerpt').innerText =  response.excerpt;
-                // document.querySelector('#myModal .modalContent .links').innerText =  response.links;
-                // document.querySelector('#myModal .modalContent .profile_picture').innerText =  response.image.excerpt;
-                modal.style.display = "block";
-            });
-        }
-
-            //.always(); or .error(function(){});
     });
     
    
