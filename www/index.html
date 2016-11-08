@@ -5,8 +5,8 @@
     <title>Assignment Two</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 
 <body>
@@ -16,50 +16,40 @@
         </div>
         <nav>
             <a href="https://github.com/web-advanced-fall-2016" target="blank">Work</a>
-            <a href="#footer">Faculty</a>
+           <!--  <a href="#footer">Faculty</a> -->
         </nav>
     </header>
     <div class="student-grid">
-        <img src="image/india.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/raha.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/chao.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/jourdy.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/miyeon.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/eliza.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/yue.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/max.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/mar.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/cecilia.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/sofia.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/t.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/chieh.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/aine.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/leyla.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/raquel.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/yi.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/dana.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/david.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/cat.jpg" class="student" data-modal='{"contentId":"panel-b"}'>
-        <img src="image/sam.jpg" class="teacher" data-modal='{"contentId":"panel-c"}'>
-        <a name="footer"></a>
     </div>
-    <div data-modal-content="panel-c">
+    <div class="modal">
+        <div class="modalContent">
+            <span class="open"> X </span>
+            <div class="info">
+                <div class="id"></div>
+                <h1 class="name"></h1>
+                <p class="email"></p>
+                <p class="exerpt"></p>
+                <div class="profile_picture"></div>
+                <div class="links"></div>
+            </div>
+        </div>
+    </div>
+            <!--   <div id="modal-content">
           <div id="c-content">
             <h1 id="name"></h1>
             <p id="content"></p>
         </div>
-    </div>
-
-    <div data-modal-content="panel-b">
+    </div> -->
+            <!-- <div class>
         <div id="b-content">
             <h1>Student Name</h1>
             <p>student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio student bio</p>
         </div>
-    </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jqueryajax.js"></script>
-    <script type="text/javascript" src="js/simple-modal.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    </div> -->
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script type="text/javascript" src="scripts/jqueryajax.js"></script>
+            <script type="text/javascript" src="scripts/simple-modal.js"></script>
+            <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 
 </html>

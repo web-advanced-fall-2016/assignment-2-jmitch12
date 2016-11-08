@@ -1,3 +1,4 @@
+/* eslint-env es6*/
 class SimpleModal {
     constructor(cas = 'modal') {
         this.contentAttributeSelector = cas;
