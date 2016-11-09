@@ -10,7 +10,7 @@ $page:100vw;
 $menu:100px;
 $side: 45px;
 $top: 35px;
-$op:.85;
+$op:.5;
 body {
     background-color: $main-color;
     height:100%;
@@ -80,6 +80,7 @@ header nav a:hover {
 
 .image:hover{
     opacity: $op;
+    cursor:pointer;
 }
 
 .modal {
@@ -100,6 +101,7 @@ header nav a:hover {
     max-width: 35%;
     margin: 20% auto;
     padding: $top;
+
     h1 {
         font-family: $title-font;
         color: $type;
@@ -110,12 +112,19 @@ header nav a:hover {
     }
     h3{
         color: $type;
-        font-family: $body-font;
+        font-family: $title-font;
         font-weight: 400;
-        font-size: 1.35em;
-        letter-spacing: 2px;
+        font-size: 1.15em;
+        letter-spacing: 1px;
         padding-bottom: 2px;
         text-transform: capitalize;
+    }
+    .bio{
+        font-family: $body-font;
+        color: $type;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        font-weight:300;
     }
     p {
         font-family: $body-font;
@@ -135,6 +144,7 @@ header nav a:hover {
 
 .open:hover{
     color:$type;
+    cursor:pointer;
 }
 
 @media only screen and (max-width: 767px) {

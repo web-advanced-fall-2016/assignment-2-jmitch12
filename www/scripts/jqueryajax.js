@@ -24,9 +24,17 @@ let info = document.querySelectorAll('.info');
                 document.querySelector('#myModal .modalContent .name').innerText =  response.first_name + " " + response.last_name;
                 // document.querySelector('#myModal .modalContent)
                 document.querySelector('#myModal .modalContent .email').innerText =  response.email;
+                
+                $.ajax({
+                    method: "GET",
+                    url: baseURL + '/student/' + evnt.target.dataset.id + "/bio",
+                }) .done(function(response){
+                    document.querySelector('#myModal .modalContent .bio').innerText =  response.full_bio;
+                    modal.style.display = "block";
+                });
+
                 document.querySelector('#myModal .modalContent .exerpt').innerText =  response.excerpt;
                 // document.querySelector('#myModal .modalContent .links').innerText =  response.links;
-                // document.querySelector('#myModal .modalContent .profile_picture').innerText =  response.image.excerpt;
                 modal.style.display = "block";
             });
         }
